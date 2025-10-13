@@ -10,12 +10,12 @@ public class Car_Chapter15 {
 	
 	// メソッド
 	public void changeGear(int afterGear) {
-		gear = afterGear;
-		if( ( gear < 1) || (5 < gear) ) {
-			speed = 10;
+		gear = afterGear - 2;
+		if( ( afterGear < 1) || (5 < afterGear) ) {
+			speed = 10; 
+		} else { speed = afterGear * 10;
 		}
-		speed = afterGear * 10;
-		System.out.println( "ギア" + gear + "から" + (gear + 2 ) + "に切り替えました");
+		System.out.println( "ギア" + gear + "から" + afterGear + "に切り替えました");
 	    }
 	public void run() {
 			// 速度を
