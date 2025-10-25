@@ -8,14 +8,18 @@ abstract public class Kato_Chapter18 {
 		public final String address = "住所は東京都中野区〇×です";
 		
 		// 共通の紹介を出力する
-		public void commonIntroduce();
-		void output() {
-		}
-		
-		// 個別の紹介を出力する
+		abstract public void commonIntroduce();
 		abstract public void eachIntroduce();
 		
+		// 普通のメソッド
+		public void output() {
+			
+		}
+		
 		// 紹介を実行する
-		public void execIntroduce();
+		public void execIntroduce() {
+			commonIntroduce();
+			eachIntroduce();
+		}
 
 	}
