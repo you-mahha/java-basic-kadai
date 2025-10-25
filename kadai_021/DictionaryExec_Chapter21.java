@@ -13,11 +13,6 @@ public class DictionaryExec_Chapter21 {
 			
 			// 配列の単語が辞書にあるか繰り返し判定
 			for (String word : words) {
-				if ("orange".equals(word)) {					
-					
-					System.out.println("orangeは辞書に存在しません");
-					continue;
-				}
 				
 				// 辞書で意味を検索、出力
 				String meaning = dictionary.getMeaning(word);
