@@ -1,6 +1,7 @@
 package kadai_028;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class Jyanken_Chapter28 {
 	private HashMap<String, String> hands = new HashMap<String, String>();
@@ -13,16 +14,19 @@ public class Jyanken_Chapter28 {
 	}
 
 	// じゃんけんクラスを作成
-	public String getMyChoice(final int choice) {
-	    String type = "r"; // choice=0 の初期値は "r" (グー)
+	public String getMyChoice() {
+		String[] myhands = { "r", "s", "p" };
+		// Scannerクラスのオブジェクトを生成
+		Scanner scanner = new Scanner(System.in);
 
-	    if (2 <= choice) {
-	        type = "p"; // choice が 2 以上の場合は "p" (パー)
-	    } else if (1 <= choice) {
-	        type = "s"; // choice が 1 の場合は "s" (チョキ)
-	    }
-	    // 求めたじゃんけんを戻り値として返す
-	    return type;
+		// 入力した内容を取得する
+		String input = scanner.next();
+
+		System.out.println(input);
+
+		String myHands = input;
+		return input;
+
 	}
 
 	// 対戦相手のじゃんけんの手を乱数で選ぶ
