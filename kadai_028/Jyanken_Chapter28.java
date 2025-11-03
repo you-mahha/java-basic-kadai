@@ -15,17 +15,25 @@ public class Jyanken_Chapter28 {
 
 	// じゃんけんクラスを作成
 	public String getMyChoice() {
-		String[] myhands = { "r", "s", "p" };
+		
 		// Scannerクラスのオブジェクトを生成
 		Scanner scanner = new Scanner(System.in);
 
 		// 入力した内容を取得する
-		String input = scanner.next();
+		String input = "";
 
-		System.out.println(input);
-
-		String myHands = input;
-		return input;
+		while(true) {
+			
+			input = scanner.nextLine();
+			
+		if (input.equals("r") || input.equals("p") || input.equals("s")) {
+			break;
+		} else {
+			System.out.println("じゃんけんの手ではありません。再入力してください。");
+		}
+	
+		}
+		return input; 
 
 	}
 
