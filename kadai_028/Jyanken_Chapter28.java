@@ -13,15 +13,16 @@ public class Jyanken_Chapter28 {
 	}
 
 	// じゃんけんクラスを作成
-	public String getMyChoice(final String inputHand) {
-		String type = "r";
+	public String getMyChoice(final int choice) {
+	    String type = "r"; // choice=0 の初期値は "r" (グー)
 
-		if (inputHand.equals("r") || inputHand.equals("s") || inputHand.equals("p")) {
-			return inputHand; // ユーザーが入力した文字列をそのまま返す
-		} else {
-			System.out.println("無効な入力です。r, s, p のいずれかを入力してください。");
-			return "r"; // 例として無効な場合は r (グー) を返すなどの処理が必要
-		}
+	    if (2 <= choice) {
+	        type = "p"; // choice が 2 以上の場合は "p" (パー)
+	    } else if (1 <= choice) {
+	        type = "s"; // choice が 1 の場合は "s" (チョキ)
+	    }
+	    // 求めたじゃんけんを戻り値として返す
+	    return type;
 	}
 
 	// 対戦相手のじゃんけんの手を乱数で選ぶ

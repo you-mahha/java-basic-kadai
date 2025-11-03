@@ -15,9 +15,7 @@ public class JyankenExec_Chapter28 {
 		Scanner scanner = new Scanner(System.in);
 
 		// 入力した内容を取得する
-		String input = scanner.next();
-
-		String myHands = Jyanken.getMyChoice(input);
+		String myHands = scanner.next();
 
 		// 対戦相手のじゃんけんの手が乱数で選ばれる
 		String cpuHands = Jyanken.getRandom();
